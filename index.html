@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Expenses</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts  -->
+<link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+
+    <!-- remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+</head>
+<body>
+
+    <!-- header -->
+
+<div class="header" id="header">
+    <!-- header > navbar > menu logo lists account  -->
+    <nav class="navbar" id="navbar">
+      <div class="menu menu">
+        <i class="ri-menu-2-fill"></i>
+      </div>
+      <div class="logo">
+        <a id="logo" href="#">FLOW HARBOUR</a>
+      </div>
+      <div class="lists" id="lists">
+        <ul>
+          <li><a href="#" class="hover-underline-animation">HOME</a></li>
+          <li><a href="#" class="hover-underline-animation">ABOUT</a></li>
+          <li><a href="#" class="hover-underline-animation">CONTACT</a></li>
+        </ul>
+
+
+
+        <div class="account">
+          <i class="ri-account-circle-fill"></i>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+         <!-- end of header -->
+    
+    <h1>Expense</h1>
+    <div class="input-section">
+        <div class="category">
+            <label for="category-select">Category:</label>
+        <input type="text" id="category-input" placeholder="Enter category">
+        </div>
+        <div class="amount">
+            <label for="amount-input">Amount:</label>
+            <input type="text" id="amount-input"></div>
+        <!-- <label for="amount-input">Amount:</label>
+        <input type="text" id="amount-input"> -->
+        <div class="date">
+            <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        </div>
+        <!-- <label for="date-input">Date:</label>
+        <input type="date" id="date-input"> -->
+        <button id="add-btn">Add</button>
+    </div>
+
+    <div class="cash-in-section">
+        <h2>Cash In</h2>
+        <div class="cash-in-container">
+            <label for="cash-in-input">Enter Cash In:</label>
+            <input type="number" id="cash-in-input" placeholder="Enter amount">
+            <button id="cash-in-btn">Add Cash In</button>
+            <span>Remaining Money: <span id="remaining-money">0</span></span>
+        </div>
+    </div>
+
+    <div class="expenses-list">
+        <h2>Expenses-list</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td id="total-amount"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
